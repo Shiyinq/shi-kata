@@ -1,0 +1,19 @@
+{
+  "name": "shi-cli",
+  "version": ".0.0.1",
+  "description": "Generate flow, for bot builth with kata.ai",
+  "main": "shi-kata.js",
+  "scripts": {
+    "dev": "shi-kata.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "shi-cli": "./shi-kata.js"
+  },
+  "dependencies": {
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.2"
+  }
+}
