@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "shi-cli": "./shi-kata.js"
+    "shi-kata": "./shi-kata.js"
   },
   "dependencies": {
     "commander": "^2.19.0",
