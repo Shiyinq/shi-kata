@@ -1,6 +1,6 @@
 {
   "name": "shi-cli",
-  "version": ".0.0.1",
+  "version": "1.0.0",
   "description": "Generate flow, for bot builth with kata.ai",
   "main": "shi-kata.js",
   "scripts": {
