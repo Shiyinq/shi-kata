@@ -1,6 +1,6 @@
 const highlight = require('cli-highlight').highlight
 const ncp = require('copy-paste')
-
+const copySucces = '\nThe action was successfully copied\n\n\nsee https://docs.kata.ai/kata-ml/action-type/'
 const text = `
 type: 'text'
 options:
@@ -171,46 +171,46 @@ module.exports = {
   actionTypes (nameAction) {
     switch (nameAction) {
       case 'text':
-        ncp.copy(text, () => console.log('Action berhasil dicopy'))
+        ncp.copy(text, () => console.log(copySucces))
         return highlight(text, { language: 'yaml', ignoreIllegals: true })
       case 'text_data':
-        ncp.copy(textData, () => console.log('Action berhasil dicopy'))
+        ncp.copy(textData, () => console.log(copySucces))
         return highlight(textData, { language: 'yaml', ignoreIllegals: true })
       case 'image':
-        ncp.copy(image, () => console.log('Action berhasil dicopy'))
+        ncp.copy(image, () => console.log(copySucces))
         return highlight(image, { language: 'yaml', ignoreIllegals: true })
       case 'button':
-        ncp.copy(button, () => console.log('Action berhasil dicopy'))
+        ncp.copy(button, () => console.log(copySucces))
         return highlight(button, { language: 'yaml', ignoreIllegals: true })
       case 'carousel':
-        ncp.copy(carousel, () => console.log('Action berhasil dicopy'))
+        ncp.copy(carousel, () => console.log(copySucces))
         return highlight(carousel, { language: 'yaml', ignoreIllegals: true })
       case 'imagemap':
-        ncp.copy(imagemap, () => console.log('Action berhasil dicopy'))
+        ncp.copy(imagemap, () => console.log(copySucces))
         return highlight(imagemap, { language: 'yaml', ignoreIllegals: true })
       case 'sticker':
-        ncp.copy(sticker, () => console.log('Action berhasil dicopy'))
+        ncp.copy(sticker, () => console.log(copySucces))
         return highlight(sticker, { language: 'yaml', ignoreIllegals: true })
       case 'video':
-        ncp.copy(video, () => console.log('Action berhasil dicopy'))
+        ncp.copy(video, () => console.log(copySucces))
         return highlight(video, { language: 'yaml', ignoreIllegals: true })
       case 'audio':
-        ncp.copy(audio, () => console.log('Action berhasil dicopy'))
+        ncp.copy(audio, () => console.log(copySucces))
         return highlight(audio, { language: 'yaml', ignoreIllegals: true })
       case 'location':
-        ncp.copy(location, () => console.log('Action berhasil dicopy'))
+        ncp.copy(location, () => console.log(copySucces))
         return highlight(location, { language: 'yaml', ignoreIllegals: true })
       case 'quick_replay':
-        ncp.copy(quickReplay, () => console.log('Action berhasil dicopy'))
+        ncp.copy(quickReplay, () => console.log(copySucces))
         return highlight(quickReplay, { language: 'yaml', ignoreIllegals: true })
       case 'schedule':
-        ncp.copy(schedule, () => console.log('Action berhasil dicopy'))
+        ncp.copy(schedule, () => console.log(copySucces))
         return highlight(schedule, { language: 'yaml', ignoreIllegals: true })
       case 'api':
-        ncp.copy(api, () => console.log('Action berhasil dicopy'))
+        ncp.copy(api, () => console.log(copySucces))
         return highlight(api, { language: 'yaml', ignoreIllegals: true })
       default:
-        return `\nTidak ada action types yang bernama ${nameAction}.\nSilahkan gunakan perintah shi-kata actl`
+        return `\nThere is no action type named ${nameAction}. \nPlease use the command shi-kata actl`
     }
   }
 }
