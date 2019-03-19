@@ -1,4 +1,5 @@
 const highlight = require('cli-highlight').highlight
+const ncp = require("copy-paste")
 
 const text = `
 type: 'text'
@@ -170,42 +171,55 @@ module.exports = {
   actionTypes (nameAction) {
     switch (nameAction) {
       case 'text':
+        ncp.copy(text, () => console.log('Action berhasil dicopy'))
         return highlight(text, {language: 'yaml', ignoreIllegals: true})
         break
       case 'text_data':
+        ncp.copy(text_data, () => console.log('Action berhasil dicopy'))
         return highlight(text_data, {language: 'yaml', ignoreIllegals: true})
         break
       case 'image':
+        ncp.copy(image, () => console.log('Action berhasil dicopy'))
         return highlight(image, {language: 'yaml', ignoreIllegals: true})
         break
       case 'button':
+        ncp.copy(button, () => console.log('Action berhasil dicopy'))
         return highlight(button, {language: 'yaml', ignoreIllegals: true})
         break
       case 'carousel':
-      return highlight(carousel, {language: 'yaml', ignoreIllegals: true})
+        ncp.copy(carousel, () => console.log('Action berhasil dicopy'))
+        return highlight(carousel, {language: 'yaml', ignoreIllegals: true})
         break
       case 'imagemap':
+        ncp.copy(imagemap, () => console.log('Action berhasil dicopy'))
         return highlight(imagemap, {language: 'yaml', ignoreIllegals: true})
         break
       case 'sticker':
+        ncp.copy(sticker, () => console.log('Action berhasil dicopy'))
         return highlight(sticker, {language: 'yaml', ignoreIllegals: true})
         break
       case 'video':
+        ncp.copy(video, () => console.log('Action berhasil dicopy'))
         return highlight(video, {language: 'yaml', ignoreIllegals: true})
         break
       case 'audio':
+        ncp.copy(audio, () => console.log('Action berhasil dicopy'))
         return highlight(audio, {language: 'yaml', ignoreIllegals: true})
         break
       case 'location':
+        ncp.copy(location, () => console.log('Action berhasil dicopy'))
         return highlight(location, {language: 'yaml', ignoreIllegals: true})
         break
       case 'quick_replay':
+        ncp.copy(quick_replay, () => console.log('Action berhasil dicopy'))
         return highlight(quick_replay, {language: 'yaml', ignoreIllegals: true})
         break
       case 'schedule':
+        ncp.copy(schedule, () => console.log('Action berhasil dicopy'))
         return highlight(schedule, {language: 'yaml', ignoreIllegals: true})
         break
       case 'api':
+        ncp.copy(api, () => console.log('Action berhasil dicopy'))
         return highlight(api, {language: 'yaml', ignoreIllegals: true})
         break
       default:
