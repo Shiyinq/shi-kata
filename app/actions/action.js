@@ -1,12 +1,12 @@
 const highlight = require('cli-highlight').highlight
-const ncp = require("copy-paste")
+const ncp = require('copy-paste')
 
 const text = `
 type: 'text'
 options:
   text: string
 `
-const text_data = `
+const textData = `
 type: 'text'
 options:
   data: $(config.messages) # dictionary location
@@ -133,7 +133,7 @@ options:
     longitude: string
     locationImageUrl: string # optional for fbmessenger
 `
-const quick_replay = `
+const quickReplay = `
 # an template action (mandatory) followed by quick reply (optional)
 type: "template"
 options:
@@ -172,59 +172,45 @@ module.exports = {
     switch (nameAction) {
       case 'text':
         ncp.copy(text, () => console.log('Action berhasil dicopy'))
-        return highlight(text, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(text, { language: 'yaml', ignoreIllegals: true })
       case 'text_data':
-        ncp.copy(text_data, () => console.log('Action berhasil dicopy'))
-        return highlight(text_data, {language: 'yaml', ignoreIllegals: true})
-        break
+        ncp.copy(textData, () => console.log('Action berhasil dicopy'))
+        return highlight(textData, { language: 'yaml', ignoreIllegals: true })
       case 'image':
         ncp.copy(image, () => console.log('Action berhasil dicopy'))
-        return highlight(image, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(image, { language: 'yaml', ignoreIllegals: true })
       case 'button':
         ncp.copy(button, () => console.log('Action berhasil dicopy'))
-        return highlight(button, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(button, { language: 'yaml', ignoreIllegals: true })
       case 'carousel':
         ncp.copy(carousel, () => console.log('Action berhasil dicopy'))
-        return highlight(carousel, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(carousel, { language: 'yaml', ignoreIllegals: true })
       case 'imagemap':
         ncp.copy(imagemap, () => console.log('Action berhasil dicopy'))
-        return highlight(imagemap, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(imagemap, { language: 'yaml', ignoreIllegals: true })
       case 'sticker':
         ncp.copy(sticker, () => console.log('Action berhasil dicopy'))
-        return highlight(sticker, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(sticker, { language: 'yaml', ignoreIllegals: true })
       case 'video':
         ncp.copy(video, () => console.log('Action berhasil dicopy'))
-        return highlight(video, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(video, { language: 'yaml', ignoreIllegals: true })
       case 'audio':
         ncp.copy(audio, () => console.log('Action berhasil dicopy'))
-        return highlight(audio, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(audio, { language: 'yaml', ignoreIllegals: true })
       case 'location':
         ncp.copy(location, () => console.log('Action berhasil dicopy'))
-        return highlight(location, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(location, { language: 'yaml', ignoreIllegals: true })
       case 'quick_replay':
-        ncp.copy(quick_replay, () => console.log('Action berhasil dicopy'))
-        return highlight(quick_replay, {language: 'yaml', ignoreIllegals: true})
-        break
+        ncp.copy(quickReplay, () => console.log('Action berhasil dicopy'))
+        return highlight(quickReplay, { language: 'yaml', ignoreIllegals: true })
       case 'schedule':
         ncp.copy(schedule, () => console.log('Action berhasil dicopy'))
-        return highlight(schedule, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(schedule, { language: 'yaml', ignoreIllegals: true })
       case 'api':
         ncp.copy(api, () => console.log('Action berhasil dicopy'))
-        return highlight(api, {language: 'yaml', ignoreIllegals: true})
-        break
+        return highlight(api, { language: 'yaml', ignoreIllegals: true })
       default:
-        return `\nTidak ada action types yang bernama ${nameAction}.\nSilahkan gunakan perintah shi-kata action -h`
-        break
+        return `\nTidak ada action types yang bernama ${nameAction}.\nSilahkan gunakan perintah shi-kata actl`
     }
   }
 }
