@@ -2,6 +2,7 @@
 
 const program = require('commander')
 const { prompt } = require('inquirer')
+const { version } = require('./package.json')
 const {
   makeFlow,
   mfOpening,
@@ -12,7 +13,7 @@ const {
 } = require('./generate')
 
 program
-  .version('1.0.5')
+  .version(`shi-kata@${version}`)
   .description('App untuk generate flow')
 
 program
