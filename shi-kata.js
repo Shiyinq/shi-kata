@@ -11,7 +11,7 @@ const {
 } = require('./generate')
 
 program
-  .version('0.0.1')
+  .version('1.0.5')
   .description('App untuk generate flow')
 
 program
