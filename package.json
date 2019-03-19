@@ -1,6 +1,6 @@
 {
   "name": "shi-kata",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate flow, for bot builth with kata.ai",
   "main": "shi-kata.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "shi-kata": "./shi-kata.js"
   },
   "dependencies": {
+    "cli-highlight": "^2.0.0",
     "commander": "^2.19.0",
     "inquirer": "^6.2.2"
   }

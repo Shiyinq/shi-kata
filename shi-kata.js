@@ -6,7 +6,8 @@ const {
 	makeFlow,
 	mfOpening,
 	mfSmalltalk,
-	mfFallback 
+	mfFallback,
+	generateAction
 } = require('./generate')
 
 program
@@ -36,5 +37,11 @@ program
 	.alias('mff')
 	.description('Membuat flow fallback')
 	.action(() => mfFallback())
+
+program
+	.command('action <nameAction>')
+	.alias('act')
+	.description(`Membuat Action Type [text, text_data, image, button, carousel, imagemap, sticker, video, audio, location, quick_reply, schedule, api]`)
+	.action((nameAction) => console.log(generateAction(nameAction)))
 
 program.parse(process.argv)

@@ -3,7 +3,8 @@ const {
 	makeFlow: { makeFlow }, 
 	mfOpening: { mfOpening }, 
 	mfSmalltalk: { mfSmalltalk },
-	mffallback: { mfFallback }
+	mffallback: { mfFallback },
+	actionTypes: { actionTypes }
 } = require('./app/index')
 
 module.exports = {
@@ -30,5 +31,8 @@ module.exports = {
 			if (err) throw err;
 			console.log(`Flow fallback.yml telah dibuat`)
 		});
+	},
+	generateAction (nameAction) {
+		return actionTypes(nameAction)
 	}
 }
