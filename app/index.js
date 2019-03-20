@@ -1,13 +1,12 @@
-const makeFlow = require('./flows/makeFlow')
-const mfOpening = require('./flows/mfOpening')
-const mfSmalltalk = require('./flows/mfSmalltalk')
-const mffallback = require('./flows/mffallback')
-const actionTypes = require('./actions/action')
+const { makeFlow, mfOpening, mfSmalltalk, mfFallback } = require('./flows/flows.json')
+const actionTypes = require('./actions/actionTypes')
+const toYml = require('json2yaml')
+const jsonToyml = (data) => { return toYml.stringify(data) }
 
 module.exports = {
-  makeFlow,
-  mfOpening,
-  mfSmalltalk,
-  mffallback,
+  makeFlow: jsonToyml(makeFlow),
+  mfOpening: jsonToyml(mfOpening),
+  mfSmalltalk: jsonToyml(mfSmalltalk),
+  mfFallback: jsonToyml(mfFallback),
   actionTypes
 }
