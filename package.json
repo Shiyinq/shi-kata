@@ -1,7 +1,7 @@
 {
   "name": "shi-kata",
-  "version": "1.0.8",
-  "description": "Generate flow, for bot builth with kata.ai",
+  "version": "1.0.9",
+  "description": "Make flow, action types and more(comming soon)",
   "main": "shi-kata.js",
   "scripts": {
     "dev": "shi-kata.js"
