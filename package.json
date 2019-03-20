@@ -8,6 +8,10 @@
   },
   "keywords": [],
   "author": "Shiyinq",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shiyinq/shi-kata.git"
+  },
   "license": "ISC",
   "bin": {
     "shi-kata": "./shi-kata.js"
