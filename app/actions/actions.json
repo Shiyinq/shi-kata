@@ -1,0 +1,225 @@
+{
+  "text": {
+    "type": "text",
+    "options": {
+      "text": "string"
+    }
+  },
+  "textData": {
+    "type": "text",
+    "options": {
+      "data": "$(config.messages)",
+      "path": "$(data.lang)",
+      "template": "$[upgrade4G.confirmUpgrade]"
+    }
+  },
+  "image": {
+    "type": "template",
+    "options": {
+      "type": "image",
+      "items": {
+        "originalContentUrl": "string",
+        "previewImageUrl": "string"
+      }
+    }
+  },
+  "button": {
+    "type": "template",
+    "options": {
+      "type": "button",
+      "items": {
+        "text": "string",
+        "title": "string",
+        "actions": [
+          {
+            "type": "postback",
+            "label": "string",
+            "payload": {
+              "key": "string"
+            }
+          },
+          {
+            "type": "url",
+            "url": "string",
+            "label": "string"
+          }
+        ]
+      }
+    }
+  },
+  "carousel": {
+    "type": "template",
+    "options": {
+      "type": "carousel",
+      "items": [
+        {
+          "text": "string",
+          "title": "string",
+          "actions": [
+            {
+              "type": "postback",
+              "label": "string",
+              "payload": {
+                "key": "string"
+              }
+            },
+            {
+              "type": "url",
+              "url": "string",
+              "label": "string"
+            }
+          ]
+        },
+        {
+          "text": "string",
+          "title": "string",
+          "actions": [
+            {
+              "type": "postback",
+              "label": "string",
+              "payload": {
+                "key": "string"
+              }
+            },
+            {
+              "type": "url",
+              "url": "string",
+              "label": "string"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "imagemap": {
+    "type": "template",
+    "options": {
+      "type": "imagemap",
+      "items": {
+        "altText": "string //example: this is an imagemap",
+        "baseUrl": "url //example: https://example.com/bot/images/rm001",
+        "baseSize": {
+          "height": "number",
+          "width": "number"
+        },
+        "actions": [
+          {
+            "text": "string",
+            "type": "message",
+            "area": {
+              "x": "number //example: 0",
+              "true": "number //example: 0",
+              "width": "number //example: 1040",
+              "height": "number //example: 350"
+            }
+          },
+          {
+            "text": "string",
+            "type": "message",
+            "area": {
+              "x": 0,
+              "true": 350,
+              "width": 1040,
+              "height": 350
+            }
+          },
+          {
+            "text": "string",
+            "type": "message",
+            "area": {
+              "x": 0,
+              "true": 700,
+              "width": 1040,
+              "height": 350
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sticker": {
+    "type": "template",
+    "options": {
+      "type": "sticker",
+      "items": {
+        "stickerId": "string",
+        "packageId": "string"
+      }
+    }
+  },
+  "video": {
+    "type": "template",
+    "options": {
+      "type": "video",
+      "items": {
+        "originalContentUrl": "string",
+        "previewImageUrl": "string"
+      }
+    }
+  },
+  "audio": {
+    "type": "template",
+    "options": {
+      "type": "audio",
+      "items": {
+        "originalContentUrl": "string",
+        "duration": "string"
+      }
+    }
+  },
+  "location": {
+    "type": "template",
+    "options": {
+      "type": "location",
+      "items": {
+        "title": "string",
+        "address": "string",
+        "latitude": "string",
+        "longitude": "string",
+        "locationImageUrl": "string"
+      }
+    }
+  },
+  "quickReplay": {
+    "type": "template",
+    "options": {
+      "type": "button | text | carousel | image",
+      "items": {
+        "quickreply": [
+          {
+            "type": "location"
+          },
+          {
+            "type": "text",
+            "thumbnailImageUrl": "string",
+            "label": "string",
+            "payload": "JsonObject"
+          }
+        ]
+      }
+    }
+  },
+  "schedule": {
+    "type": "schedule",
+    "options": {
+      "id": "string",
+      "command": "add | remove",
+      "message": "Message",
+      "start": "datetime",
+      "end": "datetime",
+      "freqType": "string, // second, minute, hour, day, week, month, year",
+      "freqInterval": "number"
+    }
+  },
+  "api": {
+    "type": "api",
+    "options": {
+      "uri": "yourUrl",
+      "method": "GET | POST",
+      "body": "JsonObject",
+      "headers": "JsonObject",
+      "query": "JsonObject",
+      "resultPath": "string"
+    }
+  }
+}
