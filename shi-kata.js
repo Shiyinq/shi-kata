@@ -59,4 +59,5 @@ program
   .description(`Generate Action Types`)
   .action((nameAction) => console.log(generateAction(nameAction)))
 
+if (process.argv.length === 2) { program.help() }
 program.parse(process.argv)
