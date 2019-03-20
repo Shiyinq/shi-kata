@@ -2,7 +2,7 @@
 
 const program = require('commander')
 const { prompt } = require('inquirer')
-const { version } = require('./package.json')
+const { version, description } = require('./package.json')
 const {
   makeFlow,
   mfOpening,
@@ -14,7 +14,7 @@ const {
 
 program
   .version(`shi-kata@${version}`)
-  .description('App untuk generate flow')
+  .description(description)
 
 program
   .command('make-flow <file-name>')
