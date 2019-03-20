@@ -12,12 +12,17 @@ const {
   actionList
 } = require('./generate')
 
-program
-  .version(`shi-kata@${version}`)
-  .description(description)
+program.on('command:*', function () {
+  console.error('Invalid command: %s\nSee --help for a list of available commands.', program.args.join(' '))
+  process.exit(1)
+})
 
 program
-  .command('make-flow <file-name>')
+  .version(`shi-kata@${version}`, '-v, --version')
+  .description(`shi-kata@${version}\n\n${description}`)
+
+program
+  .command('make-flow <fileName>')
   .alias('mf')
   .description('Generate new flow')
   .action((name) => makeFlow(name))
