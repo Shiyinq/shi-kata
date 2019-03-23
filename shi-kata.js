@@ -2,6 +2,7 @@
 
 const program = require('commander')
 const { prompt } = require('inquirer')
+const open = require('open')
 const { version, description } = require('./package.json')
 const {
   makeFlow,
@@ -20,6 +21,24 @@ program.on('command:*', function () {
 program
   .version(`shi-kata@${version}`, '-v, --version')
   .description(`shi-kata@${version}\n\n${description}`)
+
+program
+  .command('tutorial')
+  .alias('tutor')
+  .description('Tutorial make a bot with Kata.Ai')
+  .action(() => {
+    console.log('Opening your browser..')
+    open('https://docs.kata.ai/tutorial/bot-studio/')
+  })
+
+program
+  .command('documentation')
+  .alias('docs')
+  .description('Documentation Kata.Ai')
+  .action(() => {
+    console.log('Opening your browser..')
+    open('https://docs.kata.ai')
+  })
 
 program
   .command('make-flow <fileName>')
