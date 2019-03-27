@@ -1,6 +1,6 @@
 {
   "name": "shi-kata",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Make flow, action types and more(comming soon)",
   "main": "shi-kata.js",
   "scripts": {
