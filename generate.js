@@ -46,7 +46,7 @@ module.exports = {
     type: 'list',
     name: 'sampleBotList',
     message: 'Choose Sample Bot',
-    choices: ['buttonbot', 'cardbot', 'pizzabot', 'stickerbot', 'weatherbot'],
+    choices: ['buttonbot', 'cardbot', 'pizzabot', 'stickerbot', 'weatherbot', 'schedulerbot', 'newsbot'],
     filter: val => val.toLowerCase()
   }
 }
