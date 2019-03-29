@@ -40,8 +40,13 @@ module.exports = {
     name: 'actionTypes',
     message: 'Choose Action Types',
     choices: ['text', 'text_data', 'image', 'button', 'carousel', 'imagemap', 'sticker', 'video', 'audio', 'location', 'quick_reply', 'schedule', 'api'],
-    filter: function (val) {
-      return val.toLowerCase()
-    }
+    filter: val => val.toLowerCase()
+  },
+  sampleBotList: {
+    type: 'list',
+    name: 'sampleBotList',
+    message: 'Choose Sample Bot',
+    choices: ['buttonbot', 'cardbot', 'pizzabot', 'stickerbot', 'weatherbot'],
+    filter: val => val.toLowerCase()
   }
 }
