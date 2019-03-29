@@ -15,7 +15,7 @@ const {
   sampleBotList
 } = require('./generate')
 
-program.on('command:*', function () {
+program.on('command:*', () => {
   console.error('Invalid command: %s\nSee --help for a list of available commands.', program.args.join(' '))
   process.exit(1)
 })
@@ -59,7 +59,7 @@ program
   .command('make-flow <fileName>')
   .alias('mf')
   .description('Generate new flow')
-  .action((name) => makeFlow(name))
+  .action(name => makeFlow(name))
 
 program
   .command('mf-opening')
@@ -91,7 +91,7 @@ program
   .command('action <actionName>')
   .alias('act')
   .description(`Generate Action Types`)
-  .action((actionName) => console.log(generateAction(actionName)))
+  .action(actionName => console.log(generateAction(actionName)))
 
 if (process.argv.length === 2) { program.help() }
 program.parse(process.argv)

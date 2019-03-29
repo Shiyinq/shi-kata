@@ -9,25 +9,25 @@ const {
 
 module.exports = {
   makeFlow (name) {
-    fs.writeFile(process.cwd() + `\\${name}.yml`, makeFlow, function (err) {
+    fs.writeFile(process.cwd() + `\\${name}.yml`, makeFlow, err => {
       if (err) throw err
       console.log(`Flow ${name}.yml has been created`)
     })
   },
   mfOpening () {
-    fs.writeFile(process.cwd() + `\\opening.yml`, mfOpening, function (err) {
+    fs.writeFile(process.cwd() + `\\opening.yml`, mfOpening, err => {
       if (err) throw err
       console.log(`Flow opening.yml has been created`)
     })
   },
   mfSmalltalk () {
-    fs.writeFile(process.cwd() + `\\smalltalk.yml`, mfSmalltalk, function (err) {
+    fs.writeFile(process.cwd() + `\\smalltalk.yml`, mfSmalltalk, err => {
       if (err) throw err
       console.log(`Flow smalltalk.yml has been created`)
     })
   },
   mfFallback () {
-    fs.writeFile(process.cwd() + `\\fallback.yml`, mfFallback, function (err) {
+    fs.writeFile(process.cwd() + `\\fallback.yml`, mfFallback, err => {
       if (err) throw err
       console.log(`Flow fallback.yml has been created`)
     })
