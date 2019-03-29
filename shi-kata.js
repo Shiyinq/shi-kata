@@ -3,6 +3,7 @@
 const program = require('commander')
 const { prompt } = require('inquirer')
 const open = require('open')
+const decompress = require('decompress')
 const { version, description } = require('./package.json')
 const {
   makeFlow,
@@ -10,7 +11,8 @@ const {
   mfSmalltalk,
   mfFallback,
   generateAction,
-  actionList
+  actionList,
+  sampleBotList
 } = require('./generate')
 
 program.on('command:*', function () {
@@ -38,6 +40,18 @@ program
   .action(() => {
     console.log('Opening your browser..')
     open('https://docs.kata.ai')
+  })
+
+program
+  .command('sample-bot')
+  .alias('sbot')
+  .description(`Example bot`)
+  .action(() => {
+    prompt(sampleBotList).then(({ sampleBotList }) => {
+      decompress(`./sample/${sampleBotList}.zip`, process.cwd())
+        .then(() => console.log(`Sample ${sampleBotList} has been downloaded\n\ncd ${sampleBotList}`))
+        .catch(err => console.log(err))
+    })
   })
 
 program
