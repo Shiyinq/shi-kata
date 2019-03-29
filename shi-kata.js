@@ -45,10 +45,11 @@ program
 program
   .command('sample-bot')
   .alias('sbot')
-  .description(`Example bot`)
+  .description(`Generate Example bot`)
   .action(() => {
     prompt(sampleBotList).then(({ sampleBotList }) => {
-      decompress(`./sample/${sampleBotList}.zip`, process.cwd())
+      let dirname = __dirname
+      decompress(`${dirname}/sample/${sampleBotList}.zip`, process.cwd())
         .then(() => console.log(`Sample ${sampleBotList} has been downloaded\n\ncd ${sampleBotList}`))
         .catch(err => console.log(err))
     })
