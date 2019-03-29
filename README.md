@@ -12,6 +12,7 @@ Options:
 Commands:
   tutorial|tutor           Tutorial make a bot with Kata.Ai
   documentation|docs       Documentation Kata.Ai
+  sample-bot|sbot          Generate Example bot
   make-flow|mf <fileName>  Generate new flow
   mf-opening|mfo           Generate flow opening
   mf-smalltalk|mfs         Generate flow smalltalk
