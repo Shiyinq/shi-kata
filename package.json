@@ -24,7 +24,7 @@
     "download": "^7.1.0",
     "inquirer": "^6.2.2",
     "json2yaml": "^1.1.0",
-    "open": "0.0.5"
+    "open": "6.0.0"
   },
   "devDependencies": {
     "eslint": "^5.15.3",
