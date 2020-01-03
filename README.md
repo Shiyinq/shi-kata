@@ -11,6 +11,7 @@ Options:
 
 Commands:
   tutorial|tutor           Tutorial make a bot with Kata.Ai
+  kata-cli|cli             Tutorial Kata-CLI
   documentation|docs       Documentation Kata.Ai
   sample-bot|sbot          Generate Example bot
   make-flow|mf <fileName>  Generate new flow
