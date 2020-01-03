@@ -27,10 +27,19 @@ program
 program
   .command('tutorial')
   .alias('tutor')
-  .description('Tutorial make a bot with Kata.Ai')
+  .description('Tutorial make a bot with Kata Platform')
   .action(() => {
-    console.log('Opening your browser..')
+    console.log('Opening your browser...')
     open('https://docs.kata.ai/tutorial/bot-studio/')
+  })
+
+program
+  .command('kata-cli')
+  .alias('cli')
+  .description('Tutorial Kata-CLI')
+  .action(() => {
+    console.log('Opening yout browser...')
+    open('https://github.com/kata-ai/kata-cli/blob/develop/README.md')
   })
 
 program
@@ -38,7 +47,7 @@ program
   .alias('docs')
   .description('Documentation Kata.Ai')
   .action(() => {
-    console.log('Opening your browser..')
+    console.log('Opening your browser...')
     open('https://docs.kata.ai')
   })
 
