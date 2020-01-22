@@ -1,4 +1,13 @@
 # shi-kata
+Make basic flow, action types for quickly.
+
+## Install
+
+```
+npm i -g shi-kata
+```
+
+## How to Use
 
 ```
 Usage: shi-kata [options] [command]
